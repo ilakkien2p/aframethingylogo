@@ -1,0 +1,51 @@
+<html>
+    <head> 
+    
+    <title>logo</title>
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+
+    <script src="https://unpkg.com/aframe-event-set-component@4.2.1/dist/aframe-event-set-component.min.js"></script>
+
+
+</head>
+<body>
+    <a-scene background="color:#24CAFF">
+
+
+        <!--animation for camera movement-->
+
+        <a-entity animation="property:object3D.position.y; from:5; to :0; dur:4000; easing:easeOutCubic;">
+            <a-entity position="0 880 1300" rotation="-34 0 0">
+                <a-entity id="camera" camera="near:1000; far:4000; fov:2.2;"></a-entity>
+            </a-entity>
+        </a-entity> 
+
+
+
+        <!--A main lego thinigy-->
+
+        <a-entity id="logo" rotation="0 45 0">
+        
+            <a-entity animation="property:object3D.scale.y; from:0.0001; to :1; delay:200; dur:1000; easing:easeOutCubic;" position="0 0 10.75" rotation="-20 0 0" scale="1 0.0001 1" 
+            visible="false" event-set__loaded="visible:true; _delay:300;">
+        
+            <a-box position="0 15 0" colour="#EF2D5E" height="30" width="12.5" depth="1"></a-box>
+            
+            </a-entity>
+
+            <a-entity animation="property:object3D.scale.y; from:0.0001; to :1; delay:800; dur:800; easing:easeOutCubic;" position="0 15 0" rotation="-140 0 0" scale="1 0.0001 1">
+        
+            <a-box position="0 15 -0.52" colour="#24CAFF" height="30" width="12.49" depth="0.1"></a-box>
+            <a-box position="0 15 0" colour="#EF2D5A" height="30" width="12.5" depth="1"></a-box>
+            
+            </a-entity>
+
+            
+
+        </a-entity>
+        
+
+     </a-scene>
+    </body>
+<footer></footer>
+</html>
