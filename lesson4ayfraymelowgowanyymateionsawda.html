@@ -11,7 +11,6 @@
 <body>
     <a-scene background="color:#24CAFF">
 
-
         <!--animation for camera movement-->
 
         <a-entity animation="property:object3D.position.y; from:5; to :0; dur:4000; easing:easeOutCubic;">
@@ -20,8 +19,6 @@
             </a-entity>
         </a-entity> 
 
-
-
         <!--A main lego thinigy-->
 
         <a-entity id="logo" rotation="0 45 0">
@@ -29,21 +26,37 @@
             <a-entity animation="property:object3D.scale.y; from:0.0001; to :1; delay:200; dur:1000; easing:easeOutCubic;" position="0 0 10.75" rotation="-20 0 0" scale="1 0.0001 1" 
             visible="false" event-set__loaded="visible:true; _delay:300;">
         
-            <a-box position="0 15 0" colour="#EF2D5E" height="30" width="12.5" depth="1"></a-box>
+                <a-box position="0 15 0" color="#EF2D5E" height="30" width="12.5" depth="1">
+
+                    <a-entity animation="property:object3D.scale.y; from:0.0001; to :1; delay:800; dur:800; easing:easeOutCubic;" position="0 15 0" rotation="-140 0 0" scale="1 0.0001 1">
+                    <!--INSIDE-->    
+                    <a-box position="0 15 -0.52" color="#24CAFF" height="30" width="12.49" depth="0.1"></a-box>
+                    <a-box position="0 15 0" color="#EF2D5E" height="30" width="12.5" depth="1"></a-box>
+                    </a-entity>
+                </a-box>
             
             </a-entity>
 
-            <a-entity animation="property:object3D.scale.y; from:0.0001; to :1; delay:800; dur:800; easing:easeOutCubic;" position="0 15 0" rotation="-140 0 0" scale="1 0.0001 1">
-        
-            <a-box position="0 15 -0.52" colour="#24CAFF" height="30" width="12.49" depth="0.1"></a-box>
-            <a-box position="0 15 0" colour="#EF2D5A" height="30" width="12.5" depth="1"></a-box>
-            
+            <a-entity animation="property:object3D.scale.y; from:0.0001; to :1; delay:800; dur:600; easing:easeOutCubic;" position="0 8 7.5" rotation="-90 0 0" scale="1 0.0001 1" 
+            visible="false" event-set__loaded="visible:true; _delay:300;">
+            <!--TOP-->   
+                <a-box position="0 7 0.5" color="#F2E646" height="14" width="12.45" depth="0.1"></a-box>
+            <!--BOTTOM-->   
+                <a-box position="0 7 0" color="#EF2D5E" height="14" width="12.45" depth="1"></a-box>
+
             </a-entity>
 
-            
+            <!--clouds-->
+            <a-entity>
 
-        </a-entity>
-        
+                <a-box animation="property:object3D.position.z; to:350; dur:36000; loop;true; easing:;linear"  position="-5 32 200" color="#FFFFFF" height="20" width="30" depth="30" opacity="0.4">
+
+
+                </a-box>
+
+            </a-entity>
+
+         </a-entity>
 
      </a-scene>
     </body>
