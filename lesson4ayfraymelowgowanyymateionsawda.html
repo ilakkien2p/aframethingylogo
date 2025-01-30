@@ -46,10 +46,20 @@
 
             </a-entity>
 
+            <a-entity rotation="-90 0 0 ">
+                <!--grassting-->
+                <a-plane animation="property:object3D.scale.y; from:0.0001; to :1; delay:800; dur:600; easing:easeOutCubic;" position="" color="#21897C" height="40" width="40"></a-plane>
+
+            </a-entity>
+
             <!--clouds-->
             <a-entity>
 
-                <a-box animation="property:object3D.position.z; to:350; dur:36000; loop;true; easing:;linear"  position="-5 32 200" color="#FFFFFF" height="20" width="30" depth="30" opacity="0.4">
+                <a-box animation="property:object3D.position.z; to:350; dur:36000; loop:true; easing:linear;"  position="-280 240 200" color="#FFFFFF" height="10" width="15" depth="30" opacity="0.4">
+                <a-box animation="property:object3D.position.z; delay;200; to:200; dur:48000; loop:true; easing:linear;"  position="-180 150 -150" color="#FFFFFF" height="5" width="7" depth="10" opacity="0.4">
+                <a-box animation="property:object3D.position.z; delay:367; to:300; dur:28000; loop:true; easing:linear;"  position="-200 100 -200" color="#FFFFFF" height="15" width="25" depth="40" opacity="0.4">
+                <a-box animation="property:object3D.position.z; delay:500; to:350; dur:24000; loop:true; easing:linear;"  position="-175 155 -300" color="#FFFFFF" height="30" width="15" depth="500" opacity="0.4">
+                <a-box animation="property:object3D.position.z; delay:1000; to:500; dur:28372; loop:true; easing:linear;"  position="-300 175 -450" color="#FFFFFF" height="5" width="5" depth="30" opacity="0.4">
 
 
                 </a-box>
@@ -57,6 +67,14 @@
             </a-entity>
 
          </a-entity>
+
+
+
+         <a-light color="#FFFFFF" type="directional" position="4 2 1" intensity="0.8">
+         </a-light>
+
+         <a-light color="#A8A8A8" type="ambient" position="0 0 0" intensity="0.8">
+         </a-light>
 
      </a-scene>
     </body>
